@@ -18,6 +18,7 @@ test("@Webst Client App login", async ({ page }) => {
     .getByRole("button", { name: "Add to Cart" })
     .click();
 
+  // taking the screen short of the Element
   await page
     .locator(".card-body")
     .filter({ hasText: "ZARA COAT 3" })
@@ -29,8 +30,8 @@ test("@Webst Client App login", async ({ page }) => {
     .getByRole("button", { name: "Cart" })
     .click();
 
+  // get screen Short of the Page
   await page.screenshot({ path: "screenshot.png" });
-  await page.locator();
 
   //await page.pause();
   await page.locator("div li").first().waitFor();

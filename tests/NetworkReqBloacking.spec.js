@@ -7,7 +7,7 @@ test.beforeAll(async ({ browser }) => {
   const context = await browser.newContext();
   const page = await context.newPage();
   // Blocking the CSS req Calls
-  // await page.route("**/*.css", (route) => route.abort());
+  await page.route("**/*.css", (route) => route.abort());
 
   // Blocking the
   //await page.route("**/*.{jpg,png,jpeg,svg}", (route) => route.abort());
